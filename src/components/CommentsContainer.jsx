@@ -1,44 +1,44 @@
 import React from "react";
 const commentsData = [
   {
-    name: "Akshay Saini",
+    name: "Durga Prasad Konatam",
     text: "Lorem ipsum dolor sit amet, consectetur adip",
     replies: [],
   },
   {
-    name: "Akshay Saini",
+    name: "Rohit Sharma",
     text: "Lorem ipsum dolor sit amet, consectetur adip",
     replies: [
       {
-        name: "Akshay Saini",
+        name: "Virat Kohli",
         text: "Lorem ipsum dolor sit amet, consectetur adip",
         replies: [],
       },
       {
-        name: "Akshay Saini",
+        name: "MS Dhoni",
         text: "Lorem ipsum dolor sit amet, consectetur adip",
         replies: [
           {
-            name: "Akshay Saini",
+            name: "Sachin Tendulkar",
             text: "Lorem ipsum dolor sit amet, consectetur adip",
             replies: [
               {
-                name: "Akshay Saini",
+                name: "Rahul Dravid",
                 text: "Lorem ipsum dolor sit amet, consectetur adip",
                 replies: [
                   {
-                    name: "Akshay Saini",
+                    name: "Sourav Ganguly",
                     text: "Lorem ipsum dolor sit amet, consectetur adip",
                     replies: [
                       {
-                        name: "Akshay Saini",
+                        name: "Yuvraj Singh",
                         text: "Lorem ipsum dolor sit amet, consectetur adip",
                         replies: [],
                       },
                     ],
                   },
                   {
-                    name: "Akshay Saini",
+                    name: "Anil Kumble",
                     text: "Lorem ipsum dolor sit amet, consectetur adip",
                     replies: [],
                   },
@@ -51,24 +51,23 @@ const commentsData = [
     ],
   },
   {
-    name: "Akshay Saini",
+    name: "Hardik Pandya",
     text: "Lorem ipsum dolor sit amet, consectetur adip",
     replies: [],
   },
   {
-    name: "Akshay Saini",
+    name: "KL Rahul",
     text: "Lorem ipsum dolor sit amet, consectetur adip",
     replies: [],
   },
   {
-    name: "Akshay Saini",
+    name: "Shikhar Dhawan",
     text: "Lorem ipsum dolor sit amet, consectetur adip",
     replies: [],
   },
   {
-    name: "Akshay Saini",
-    text: "Lorem ipsum dolor sit amet, consectetur adip",
-    replies: [],
+    name: "Rishabh Pant",
+    text: "Lorem ipsum dolo",
   },
 ];
 
