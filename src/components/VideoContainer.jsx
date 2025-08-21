@@ -13,7 +13,7 @@ const VideoContainer = () => {
     const data = await fetch(YOUTUBE_VIDEOS_API);
     const json = await data.json();
     setVideos(json.items);
-    // console.log(json);
+    console.log(json);
   };
   return (
     <div className="flex flex-wrap">

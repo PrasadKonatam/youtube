@@ -16,13 +16,14 @@ export const formatNumber = (num) => {
 const VideoCard = ({ info }) => {
   const { snippet, statistics } = info;
   const { title, channelTitle, thumbnails } = snippet;
+
   return (
     <div className="m-1  ml-2 shadow w-[400px] ">
       <div>
         <img
           className="rounded-l-lg w-full"
           alt="thumbnail"
-          src={thumbnails.medium.url}
+          src={thumbnails?.maxres?.url || thumbnails?.high.url}
         />
       </div>
       <div>
