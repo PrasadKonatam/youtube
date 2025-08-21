@@ -32,24 +32,25 @@ const WatchPage = () => {
   }, []);
 
   return (
-    <div className="flex p-4">
+    <div className="flex flex-col md:flex-row p-4 overflow-hidden">
       {/* Left: Video + Comments */}
-      <div className="flex-1">
-        <iframe
-          width="1000"
-          height="500"
-          src={`https://www.youtube.com/embed/${videoId}`}
-          title="YouTube video player"
-          frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-        ></iframe>
+      <div className="flex-1 min-w-0">
+        <div className="w-full aspect-video">
+          <iframe
+            className="w-full h-full rounded-lg"
+            src={`https://www.youtube.com/embed/${videoId}`}
+            title="YouTube video player"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
+        </div>
 
         <CommentsContainer />
       </div>
 
       {/* Right: Up Next Videos */}
-      <div className="w-96 ml-4">
+      <div className="w-full md:w-96 md:ml-4 mt-6 md:mt-0 overflow-y-auto">
         <h2 className="text-lg font-semibold mb-2">Up Next</h2>
         {upNextVideos.map((video) => (
           <Link

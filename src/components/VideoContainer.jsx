@@ -2,11 +2,15 @@ import React, { useEffect, useState } from "react";
 import { YOUTUBE_VIDEOS_API } from "../utils/constants";
 import VideoCard from "./VideoCard";
 import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { openMenu } from "../utils/appSlice";
 
 const VideoContainer = () => {
+  const dispatch = useDispatch();
   const [videos, setVideos] = useState([]);
   useEffect(() => {
     getVideos();
+    dispatch(openMenu());
   }, []);
 
   const getVideos = async () => {
