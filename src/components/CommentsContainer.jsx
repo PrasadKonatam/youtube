@@ -1,4 +1,5 @@
 import React from "react";
+
 const commentsData = [
   {
     name: "Durga Prasad Konatam",
@@ -68,11 +69,13 @@ const commentsData = [
   {
     name: "Rishabh Pant",
     text: "Lorem ipsum dolo",
+    // replies missing → handled in code
   },
 ];
 
+// Single comment component
 const Comment = ({ data }) => {
-  const { name, text, replies } = data;
+  const { name, text } = data;
   return (
     <div className="flex shadow-sm bg-gray-100 p-2 rounded-lg my-2">
       <img
@@ -88,12 +91,13 @@ const Comment = ({ data }) => {
   );
 };
 
+// Recursive list component
 const CommentsList = ({ comments }) => {
   return comments.map((comment, index) => (
     <div key={index}>
       <Comment data={comment} />
-      {/* Replies should be indented */}
-      {comment.replies.length > 0 && (
+      {/* Render replies if available */}
+      {comment.replies && comment.replies.length > 0 && (
         <div className="pl-5 border-l border-gray-300 ml-5">
           <CommentsList comments={comment.replies} />
         </div>
@@ -102,6 +106,7 @@ const CommentsList = ({ comments }) => {
   ));
 };
 
+// Main container
 const CommentsContainer = () => {
   return (
     <div className="m-5 p-2 w-[950px]">
